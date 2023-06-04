@@ -4,6 +4,10 @@ Weatherman Challenge is a React based app that uses a beautiful and minimalistic
 
 The app can use either dummy data (already included) or an API to fetch data and it is very easy to switch between them. Below is a list of the main features implemented in the app.
 
+<img width="1437" alt="image" src="https://github.com/amitaisopher/weatherman-challenge/assets/9464281/1ba9e867-9a1a-4c3c-890c-1426dcc1368c">
+
+
+
 ## Features
 
 - Show historic weather data based on location

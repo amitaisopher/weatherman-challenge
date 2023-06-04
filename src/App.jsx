@@ -36,7 +36,6 @@ function App() {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    debugger
     if (inputValue !== '') {
       setLocation(inputValue)
       setInputValue('')

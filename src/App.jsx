@@ -11,6 +11,7 @@ import WeatherHistory from './components/WeatherHistory';
 import TabPanel from './components/TabPanel';
 import { a11yProps } from './utils/general'
 import { calcIrridationDailyDelta } from './utils/general'
+import SearchBar from './components/SearchBar'
 
 const apiKey = 'YOUR_API_KEY_FOR_OPENWEATHER.COM'
 
@@ -74,14 +75,7 @@ function App() {
   return (
     <div className="w-full h-full bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col items-center px-4 lg:px-0">
       {/*form */}
-      <form className='h-16 bg-black/30 w-full max-w-[450px] rounded-full backdrop-blur-[32px] mb-8 mt-8'>
-        <div className="h-full relative flex items-center justify-between p-2">
-          <input ref={inputRef} onChange={inputHandler} className="flex-1 bg-transparent outline-none placeholder:text-white text-white text-[15px] font-light pl-6 h-full" type="text" placeholder="Search by city or country" />
-          <button onClick={submitHandler} className="bg-[#1ab8ed] hover:bg-[#15abdd] w-20 h-12 rounded-full flex justify-center items-center transition">
-            <IoMdSearch className="text-2xl text-white" />
-          </button>
-        </div>
-      </form>
+      <SearchBar ref={inputRef} inputChangeHandler={inputHandler} submitSearchHandler={submitHandler} placeholderText='Search by city or country' />
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 0, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="weather history and irradiation" centered textColor="inherit" className="w-max-[450px] mx-auto">
